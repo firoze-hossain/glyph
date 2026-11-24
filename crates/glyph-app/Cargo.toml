@@ -1,0 +1,17 @@
+[package]
+name = "glyph-app"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Glyph cross-platform desktop CLI and interactive code & text editor viewer"
+
+[dependencies]
+glyph-core = { path = "../glyph-core" }
+glyph-syntax = { path = "../glyph-syntax" }
+glyph-ui = { path = "../glyph-ui" }
+glyph-platform = { path = "../glyph-platform" }
+
+[[bin]]
+name = "glyph"
+path = "src/main.rs"

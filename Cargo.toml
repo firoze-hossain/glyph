@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/glyph-core",
+    "crates/glyph-syntax",
+    "crates/glyph-ui",
+    "crates/glyph-platform",
+    "crates/glyph-app",
+]
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+authors = ["NovaOS Enterprise Architecture Team"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/firoze-hossain/glyph"
+description = "Glyph Sovereign Code & Text Editor with Piece-Table Buffer & Multi-Language Syntax"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

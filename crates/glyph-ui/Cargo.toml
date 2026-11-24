@@ -1,0 +1,15 @@
+[package]
+name = "glyph-ui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Pure 2D software buffer renderer for Glyph editor: gutter line numbers, acrylic theme, status bar, and file tree"
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
+glyph-core = { path = "../glyph-core" }
+glyph-syntax = { path = "../glyph-syntax" }

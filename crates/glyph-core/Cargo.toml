@@ -1,0 +1,13 @@
+[package]
+name = "glyph-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Core domain models: Piece-Table buffer, multi-cursor, bracket matching, folding, tabs, and search"
+
+[features]
+default = ["std"]
+std = []
+
+[dependencies]
