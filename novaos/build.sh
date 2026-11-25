@@ -46,19 +46,16 @@ ld -m elf_i386 -Ttext=0x08048000 --entry=_start -static \
 
 mkdir -p "$NOVAOS_ROOT/tools/fixtures"
 cp glyph.elf "$NOVAOS_ROOT/tools/fixtures/GLYPH.ELF"
-cp glyph.elf "$NOVAOS_ROOT/tools/fixtures/EDIT.ELF"
 
-# Generate GLYPH.PKG and EDITOR.PKG metadata fixtures
+# Generate GLYPH.PKG metadata fixture
 cat << 'EOF' > "$NOVAOS_ROOT/tools/fixtures/GLYPH.PKG"
 [package]
 id = "org.novaos.glyph"
 name = "Glyph Code Studio"
 version = "1.0.0"
 category = "Development"
-app_filename = "EDIT.ELF"
+app_filename = "GLYPH.ELF"
 summary = "Sovereign pure-Rust code & text editor with piece-table buffer & multi-language syntax"
 EOF
 
-cp "$NOVAOS_ROOT/tools/fixtures/GLYPH.PKG" "$NOVAOS_ROOT/tools/fixtures/EDITOR.PKG"
-
-echo "✅ Built and installed GLYPH.ELF, EDIT.ELF and packages into $NOVAOS_ROOT/tools/fixtures/"
+echo "✅ Built and installed GLYPH.ELF and GLYPH.PKG into $NOVAOS_ROOT/tools/fixtures/"
